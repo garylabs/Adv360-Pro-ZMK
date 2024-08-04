@@ -17,6 +17,20 @@
             bindings = <&kp RET>;
         };
 
+        m1: m1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp MINUS &kp N4 &kp D &kp N4 &kp LS(E) &kp LS(U) &kp LS(U) &kp LS(Z) &kp LS(M) &kp LS(Z) &kp LS(Y)>;
+            label = "M1";
+        };
+
+        dbz: dbz {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(B) &kp R &kp O &kp L &kp Y &kp LS(B) &kp A &kp R &kp D &kp O &kp C &kp K &kp DLLR &kp DLLR &kp N2 &kp LS(V) &kp E &kp G &kp E &kp T &kp A &kp LS(F) &kp U &kp T &kp U &kp R &kp E &kp LS(G) &kp O &kp H &kp A &kp N>;
+            label = "DBZ";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -38,11 +52,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3              &kp N4       &kp N5          &tog 1                                                             &mo 3      &kp N6           &kp N7       &kp N8               &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E               &kp R        &kp T           &none                                                              &none      &kp Y            &kp U        &kp I                &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &hm LEFT_COMMAND D  &hm RCTRL F  &hm LEFT_ALT G  &none            &kp LCTRL     &kp LALT      &kp LGUI   &kp RCTRL  &none      &hm RIGHT_ALT H  &hm RCTRL J  &hm RIGHT_COMMAND K  &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C               &kp V        &kp B                                          &kp HOME      &kp PG_UP                        &kp N            &kp M        &kp COMMA            &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT            &kp RIGHT                    &lt 1 BACKSPACE  &lt 2 DELETE  &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                   &kp UP       &kp DOWN             &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3              &kp N4       &kp N5          &tog 1                                                            &mo 3      &kp N6           &kp N7       &kp N8               &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E               &kp R        &kp T           &none                                                             &none      &kp Y            &kp U        &kp I                &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &hm LEFT_COMMAND D  &hm RCTRL F  &hm LEFT_ALT G  &none            &kp LCTRL     &kp LALT      &kp LGUI  &kp RCTRL  &none      &hm RIGHT_ALT H  &hm RCTRL J  &hm RIGHT_COMMAND K  &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C               &kp V        &kp B                                          &kp HOME      &dbz                            &kp N            &kp M        &kp COMMA            &kp DOT   &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT            &kp RIGHT                    &lt 1 BACKSPACE  &lt 2 DELETE  &kp END       &m1       &kp ENTER  &kp SPACE                   &kp UP       &kp DOWN             &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
