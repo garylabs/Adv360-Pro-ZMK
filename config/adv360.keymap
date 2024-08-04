@@ -31,6 +31,13 @@
             label = "DBZ";
         };
 
+        p1: p1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp G &kp U &kp D &kp X &kp E &kp LS(M) &kp MINUS &kp R &kp O &kp Z &kp N &kp O &kp N5 &kp MINUS &kp X &kp Y &kp T &kp G &kp A &kp J>;
+            label = "P1";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -56,7 +63,7 @@
 &kp TAB    &kp Q      &kp W     &kp E               &kp R        &kp T           &none                                                             &none      &kp Y            &kp U        &kp I                &kp O     &kp P     &kp BSLH
 &kp ESC    &kp A      &kp S     &hm LEFT_COMMAND D  &hm RCTRL F  &hm LEFT_ALT G  &none            &kp LCTRL     &kp LALT      &kp LGUI  &kp RCTRL  &none      &hm RIGHT_ALT H  &hm RCTRL J  &hm RIGHT_COMMAND K  &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C               &kp V        &kp B                                          &kp HOME      &dbz                            &kp N            &kp M        &kp COMMA            &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT            &kp RIGHT                    &lt 1 BACKSPACE  &lt 2 DELETE  &kp END       &m1       &kp ENTER  &kp SPACE                   &kp UP       &kp DOWN             &kp LBKT  &kp RBKT  &mo 2
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT            &kp RIGHT                    &lt 1 BACKSPACE  &lt 2 DELETE  &p1           &m1       &kp ENTER  &kp SPACE                   &kp UP       &kp DOWN             &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
