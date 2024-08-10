@@ -50,7 +50,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        alt: alt {
+        alt: m1 {
             compatible = "zmk,behavior-tap-dance";
             label = "ALT";
             #binding-cells = <0>;
